@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("GestionInfirmerie")]
+[assembly: AssemblyTitle("InfirmerieBO")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GestionInfirmerie")]
+[assembly: AssemblyProduct("InfirmerieBO")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("f74a7067-337e-4303-9011-0377246a80a1")]
+[assembly: Guid("4bc82601-7976-4f19-b0ea-34cfa31fc4e2")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //
