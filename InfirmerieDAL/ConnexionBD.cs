@@ -3,10 +3,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace InfirmerieDAL
 {
     public class ConnexionBD
     {
+        private static ConnexionBD uneConnexionBD;
+        private string chaineConnexion;
+        private SqlConnection maConnexion;
+
+        private ConnexionBD()
+        {
+        }
+
+        public string GetchaineConnexion()
+        {
+            return chaineConnexion;
+        }
+
+        public void SetchaineConnexion(string ch)
+        {
+            chaineConnexion = ch;
+        }
+
+        public static ConnexionBD GetConnexionBD()
+        {
+            if (uneConnexionBD == null)
+            {
+                uneConnexionBD = new ConnexionBD();
+            }
+
+            return uneConnexionBD;
+        }
+
+        public SqlConnection GetSqlConnection()
+        {
+            if (maConnexion == null)
+            {
+                maConnexion = new SqlConnection();
+            }
+
+            maConnexion.ConnectionString = chaineConnexion;
+
+            if (maConnexion.State == System.Data.ConnectionState.Closed)
+            {
+                maConnexion.Open();
+            }
+
+            return maConnexion;
+        }
+
+        public void CloseConnexion()
+        {
+            if (this.maConnexion != null && this.maConnexion.State != System.Data.ConnectionState.Closed)
+            {
+                this.maConnexion.Close();
+            }
+        }
     }
 }
