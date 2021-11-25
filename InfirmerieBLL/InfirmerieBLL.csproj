@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,8 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GestionInfimerie.cs" />
+    <Compile Include="GestionClasses.cs" />
+    <Compile Include="GestionEleves.cs" />
+    <Compile Include="GestionUtilisateurs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InfirmerieBO\InfirmerieBO.csproj">
+      <Project>{4bc82601-7976-4f19-b0ea-34cfa31fc4e2}</Project>
+      <Name>InfirmerieBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InfirmerieDAL\InfirmerieDAL.csproj">
+      <Project>{302704fc-af89-448e-bac2-0af0dc2a5e04}</Project>
+      <Name>InfirmerieDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
