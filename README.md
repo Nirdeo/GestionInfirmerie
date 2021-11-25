@@ -1,2 +1,2 @@
 # GestionInfirmerie
-PPE C#
+PPE C# par Maxime Etryhard et Victor De Domenico
