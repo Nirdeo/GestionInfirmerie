@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuthentification));
             this.btnValider = new System.Windows.Forms.Button();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblMdp = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.txtMdp = new System.Windows.Forms.TextBox();
             this.btnQuitter = new System.Windows.Forms.Button();
+            this.lblTitre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnValider
@@ -89,19 +91,32 @@
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
+            // lblTitre
+            // 
+            this.lblTitre.AutoSize = true;
+            this.lblTitre.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblTitre.Location = new System.Drawing.Point(355, 9);
+            this.lblTitre.Name = "lblTitre";
+            this.lblTitre.Size = new System.Drawing.Size(127, 24);
+            this.lblTitre.TabIndex = 7;
+            this.lblTitre.Text = "S\'authentifier";
+            // 
             // frmAuthentification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.txtMdp);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.lblMdp);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.btnValider);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAuthentification";
-            this.Text = "Authentification";
+            this.Text = "Gestion Infirmerie";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +130,6 @@
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.TextBox txtMdp;
         private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.Label lblTitre;
     }
 }

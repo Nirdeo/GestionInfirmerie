@@ -149,8 +149,70 @@ namespace InfirmerieDAL
                     return true;
                 }
             }
-
             return false;
         }
+
+        /*public static int AjoutEleve(Eleve UnEleve)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText =
+                "INSERT INTO T_Eleve (Nom_eleve, Prenom_eleve, Date_de_naissance_eleve, Telephone_eleve, Telephone_parent_eleve, Tier_temps_eleve, Commentaire_sante_eleve, Id_classe_eleve) VALUES (@nom,@prn,@tel_elv,@tel_elv_prt,@com,@tier_tps,@date,@classe)";
+            //cmd.CommandText = "UPDATE eleve SET nom_eleve = @nom WHERE id_eleve = @id";
+            cmd.Parameters.AddWithValue("@nom", eleve.Nom);
+            cmd.Parameters.AddWithValue("@prn", eleve.Prenom);
+            cmd.Parameters.AddWithValue("@tel_elv", eleve.Telephone);
+            cmd.Parameters.AddWithValue("@tel_elv_prt", eleve.Telephone_parent);
+            cmd.Parameters.AddWithValue("@com", eleve.Commentaire_sante);
+            cmd.Parameters.AddWithValue("@tier_tps", eleve.Tier_temps);
+            cmd.Parameters.AddWithValue("@date", eleve.Date_de_naissance);
+            cmd.Parameters.AddWithValue("@classe", eleve.Libelle_classe);
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
+
+        public static int UpdateEleve(Eleve UnEleve)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText =
+                "UPDATE T_eleve SET Nom = @nom , Prenom = @prn , Telephone_eleve = @tel_elv, Telephone_parent_eleve = @tel_elv_prt, Commentaire_sante_eleve = @com, tier_temps_eleve = @tier_tps, Date_naissance_eleve = @date , Id_classe_eleve = @classe WHERE id_eleve = @id";
+            cmd.Parameters.AddWithValue("@nom", eleve.Nom);
+            cmd.Parameters.AddWithValue("@prn", eleve.Prenom);
+            cmd.Parameters.AddWithValue("@tel_elv", eleve.Telephone);
+            cmd.Parameters.AddWithValue("@tel_elv_prt", eleve.Telephone_parent);
+            cmd.Parameters.AddWithValue("@com", eleve.Commentaire_sante);
+            cmd.Parameters.AddWithValue("@tier_tps", eleve.Tier_temps);
+            cmd.Parameters.AddWithValue("@date", eleve.Date_de_naissance);
+            cmd.Parameters.AddWithValue("@classe", eleve.Libelle_classe);
+            cmd.Parameters.AddWithValue("@id", eleve.Id);
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }
+
+        public static int DeleteEleve(int id)
+        {
+            int nbEnr;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "DELETE FROM T_eleve WHERE id_eleve = @id";
+            cmd.Parameters.AddWithValue("@id", id);
+            nbEnr = cmd.ExecuteNonQuery();
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return nbEnr;
+        }*/
     }
 }

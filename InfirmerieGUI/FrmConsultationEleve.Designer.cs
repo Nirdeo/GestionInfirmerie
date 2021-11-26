@@ -1,7 +1,7 @@
 ﻿
 namespace InfirmerieGUI
 {
-    partial class frmDetailsEleve
+    partial class frmConsultationEleve
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -29,11 +29,13 @@ namespace InfirmerieGUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultationEleve));
             this.lblNom = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
             this.dgvEleve = new System.Windows.Forms.DataGridView();
             this.btnRetour = new System.Windows.Forms.Button();
+            this.lblTitre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEleve)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +57,7 @@ namespace InfirmerieGUI
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(361, 197);
+            this.btnValider.Location = new System.Drawing.Point(350, 191);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(75, 23);
             this.btnValider.TabIndex = 2;
@@ -75,7 +77,7 @@ namespace InfirmerieGUI
             // 
             // btnRetour
             // 
-            this.btnRetour.Location = new System.Drawing.Point(361, 70);
+            this.btnRetour.Location = new System.Drawing.Point(350, 415);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(75, 23);
             this.btnRetour.TabIndex = 4;
@@ -83,18 +85,31 @@ namespace InfirmerieGUI
             this.btnRetour.UseVisualStyleBackColor = true;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
-            // frmDetailsEleve
+            // lblTitre
+            // 
+            this.lblTitre.AutoSize = true;
+            this.lblTitre.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitre.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblTitre.Location = new System.Drawing.Point(331, 9);
+            this.lblTitre.Name = "lblTitre";
+            this.lblTitre.Size = new System.Drawing.Size(171, 24);
+            this.lblTitre.TabIndex = 5;
+            this.lblTitre.Text = "Chercher un élève";
+            // 
+            // frmConsultationEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.dgvEleve);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.lblNom);
-            this.Name = "frmDetailsEleve";
-            this.Text = "ListeEleves";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmConsultationEleve";
+            this.Text = "Gestion Infirmerie";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEleve)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,6 +123,7 @@ namespace InfirmerieGUI
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.DataGridView dgvEleve;
         private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.Label lblTitre;
     }
 }
 

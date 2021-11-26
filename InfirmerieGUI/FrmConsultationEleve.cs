@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
 using System.Windows.Forms;
-using InfirmerieBLL;
+using InfirmerieBLL; // Référence la couche BLL
 using InfirmerieBO; // Référence la couche BO
 
 namespace InfirmerieGUI
 {
-    public partial class frmDetailsEleve : Form
+    public partial class frmConsultationEleve : Form
     {
-        public frmDetailsEleve()
+        public frmConsultationEleve()
         {
             InitializeComponent();
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
@@ -103,6 +103,7 @@ namespace InfirmerieGUI
                 DialogResult dialogResult =
                     MessageBox.Show("Voulez-vous chercher un élève portant le nom " + txtNom.Text + " ?",
                         "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                 if (dialogResult == DialogResult.Yes && GestionEleves.AfficherEleve(txtNom.Text) == true)
                 {
                     MessageBox.Show("Voici les résultats.");
@@ -116,6 +117,11 @@ namespace InfirmerieGUI
                     MessageBox.Show("L'élève n'existe pas !", "Attention", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                 }
+            }
+
+            else
+            {
+                MessageBox.Show("Aucun nom recherché");
             }
         }
     }
