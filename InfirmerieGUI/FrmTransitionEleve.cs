@@ -31,10 +31,11 @@ namespace InfirmerieGUI
 
         private void btnModEle_Click(object sender, EventArgs e)
         {
+            this.Close();
             Eleve unEleve = (Eleve)cbxModEle.SelectedItem;
             FrmModificationEleve FrmModEleve;
             FrmModEleve = new FrmModificationEleve(unEleve);
-            FrmModEleve.ShowDialog();
+            FrmModEleve.Show();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)

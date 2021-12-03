@@ -31,10 +31,11 @@ namespace InfirmerieGUI
 
         private void btnModMed_Click(object sender, EventArgs e)
         {
+            this.Close();
             Medicament unMedicament = (Medicament)cbxModMed.SelectedItem;
             FrmModificationMedicament FrmModMedicament;
             FrmModMedicament = new FrmModificationMedicament(unMedicament);
-            FrmModMedicament.ShowDialog();
+            FrmModMedicament.Show();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
