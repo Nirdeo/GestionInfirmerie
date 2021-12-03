@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 
 namespace InfirmerieBLL
 {
-    public class GestionVisites
+    public class GestionQuantiteMedicaments
     {
-        private static GestionVisites uneGestionVisites; // objet BLL
+        private static GestionQuantiteMedicaments uneGestionQuantiteMedicaments; // objet BLL
 
         // Accesseur en lecture
-        public static GestionVisites GetGestionVisites()
+        public static GestionQuantiteMedicaments GetGestionQuantiteMedicaments()
         {
-            if (uneGestionVisites == null)
+            if (uneGestionQuantiteMedicaments == null)
             {
-                uneGestionVisites = new GestionVisites();
+                uneGestionQuantiteMedicaments = new GestionQuantiteMedicaments();
             }
 
-            return uneGestionVisites;
+            return uneGestionQuantiteMedicaments;
         }
 
         // Définit la chaîne de connexion grâce à la méthode SetchaineConnexion de la DAL
@@ -31,9 +31,9 @@ namespace InfirmerieBLL
             ConnexionBD.GetConnexionBD().SetchaineConnexion(chaine);
         }
 
-        public static List<Visite> ObtenirVisites()
+        public static List<QuantiteMedicament> ObtenirQuantiteMedicaments()
         {
-            return VisiteDAO.GetVisites();
+            return QuantiteMedicamentDAO.GetQuantiteMedicaments();
         }
     }
 }

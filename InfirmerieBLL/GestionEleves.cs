@@ -38,11 +38,6 @@ namespace InfirmerieBLL
             return EleveDAO.ConsulterEleve(nomE);
         }
 
-        public static bool AfficherEleve(string nomE)
-        {
-            return EleveDAO.TrouverEleve(nomE);
-        }
-
         // Méthode qui renvoi l’objet Eleve en l'ajoutant à la BD avec la méthode InsertEleve de la DAL
         public static int AjouterEleve(Eleve unEleve)
         {

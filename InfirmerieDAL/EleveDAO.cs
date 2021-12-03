@@ -140,19 +140,6 @@ namespace InfirmerieDAL
             return lesEleves;
         }
 
-        public static bool TrouverEleve(string nomE)
-        {
-            foreach (Eleve unEleve in ConsulterEleve(nomE))
-            {
-                if (nomE == unEleve.Nom)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
         public static int InsertEleve(Eleve unEleve)
         {
             int nbEnr;

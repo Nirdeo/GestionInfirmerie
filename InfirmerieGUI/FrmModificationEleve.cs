@@ -10,6 +10,7 @@ namespace InfirmerieGUI
     public partial class FrmModificationEleve : Form
     {
         public int id;
+
         public FrmModificationEleve(Eleve unEleve)
         {
             InitializeComponent();
@@ -40,12 +41,13 @@ namespace InfirmerieGUI
                 !string.IsNullOrEmpty(txtNumParEle.Text) || !string.IsNullOrEmpty(chkTieTemEle.Text) ||
                 !string.IsNullOrEmpty(txtComSanEle.Text) || !string.IsNullOrEmpty(cbxClaEle.Text))
             {
-                DialogResult dialogResult = MessageBox.Show("Voulez-vous modifier l'élève sélectionné ?", "Confirmation",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous modifier l'élève sélectionné ?",
+                    "Confirmation",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Eleve unEleve = new Eleve(id, txtNomEle.Text, txtPrenEle.Text, dtpDatNaiEle.Value, txtNumEle.Text,
-                    txtNumParEle.Text, chkTieTemEle.Checked, txtComSanEle.Text, (int)cbxClaEle.SelectedValue);
+                        txtNumParEle.Text, chkTieTemEle.Checked, txtComSanEle.Text, (int)cbxClaEle.SelectedValue);
                     GestionEleves.ModifierEleve(unEleve);
                     MessageBox.Show("L'élève a bien été modifié");
                 }

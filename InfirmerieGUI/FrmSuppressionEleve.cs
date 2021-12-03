@@ -26,13 +26,20 @@ namespace InfirmerieGUI
         {
             if (!string.IsNullOrEmpty(cbxSupEle.Text))
             {
-                DialogResult dialogResult = MessageBox.Show("Voulez-vous supprimer l'élève sélectionné ?", "Confirmation",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous supprimer l'élève sélectionné ?",
+                    "Confirmation",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Eleve unEleve = new Eleve((int)cbxSupEle.SelectedValue);
                     GestionEleves.SupprimerEleve(unEleve);
                     MessageBox.Show("L'élève a bien été supprimé");
+                    List<Eleve> liste = new List<Eleve>();
+                    liste = GestionEleves.ObtenirEleves();
+
+                    cbxSupEle.ValueMember = "Id";
+                    cbxSupEle.DisplayMember = "Identite";
+                    cbxSupEle.DataSource = liste;
                 }
             }
 

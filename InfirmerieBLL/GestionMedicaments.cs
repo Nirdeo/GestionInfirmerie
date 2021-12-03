@@ -50,5 +50,10 @@ namespace InfirmerieBLL
         {
             return MedicamentDAO.DeleteMedicament(unMedicament);
         }
+
+        public static List<Medicament> ChercherMedicament(string nomM)
+        {
+            return MedicamentDAO.ConsulterMedicament(nomM);
+        }
     }
 }

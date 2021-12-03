@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Windows.Forms;
 using InfirmerieBLL; // Référence la couche BLL
@@ -10,6 +9,7 @@ namespace InfirmerieGUI
     public partial class FrmModificationMedicament : Form
     {
         public int id;
+
         public FrmModificationMedicament(Medicament unMedicament)
         {
             InitializeComponent();
@@ -24,8 +24,9 @@ namespace InfirmerieGUI
         {
             if (!string.IsNullOrEmpty(txtNomMed.Text))
             {
-                DialogResult dialogResult = MessageBox.Show("Voulez-vous modifier le médicament sélectionné ?", "Confirmation",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous modifier le médicament sélectionné ?",
+                    "Confirmation",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Medicament unMedicament = new Medicament(id, txtNomMed.Text);

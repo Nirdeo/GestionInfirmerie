@@ -19,8 +19,9 @@ namespace InfirmerieGUI
         {
             if (!string.IsNullOrEmpty(txtNomMed.Text))
             {
-                DialogResult dialogResult = MessageBox.Show("Voulez-vous ajouter le médicament sélectionné ?", "Confirmation",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous ajouter le médicament sélectionné ?",
+                    "Confirmation",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Medicament unMedicament = new Medicament(txtNomMed.Text);

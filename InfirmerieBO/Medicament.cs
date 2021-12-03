@@ -5,7 +5,6 @@
         int Id_medicament;
         string Libelle_medicament;
 
-        // Constructeurs
         public Medicament(int id_medicament)
         {
             Id_medicament = id_medicament;

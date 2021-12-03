@@ -41,7 +41,7 @@ namespace InfirmerieGUI
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(165, 102);
+            this.lblNom.Location = new System.Drawing.Point(221, 58);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(176, 16);
             this.lblNom.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace InfirmerieGUI
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(350, 99);
+            this.txtNom.Location = new System.Drawing.Point(406, 55);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(180, 22);
             this.txtNom.TabIndex = 1;
@@ -58,11 +58,11 @@ namespace InfirmerieGUI
             // dgvEleve
             // 
             this.dgvEleve.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEleve.Location = new System.Drawing.Point(28, 168);
+            this.dgvEleve.Location = new System.Drawing.Point(4, 127);
             this.dgvEleve.Name = "dgvEleve";
             this.dgvEleve.RowHeadersWidth = 51;
             this.dgvEleve.RowTemplate.Height = 24;
-            this.dgvEleve.Size = new System.Drawing.Size(744, 229);
+            this.dgvEleve.Size = new System.Drawing.Size(792, 270);
             this.dgvEleve.TabIndex = 3;
             // 
             // btnRetour

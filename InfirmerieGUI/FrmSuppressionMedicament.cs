@@ -26,13 +26,20 @@ namespace InfirmerieGUI
         {
             if (!string.IsNullOrEmpty(cbxSupMed.Text))
             {
-                DialogResult dialogResult = MessageBox.Show("Voulez-vous supprimer le médicament sélectionné ?", "Confirmation",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous supprimer le médicament sélectionné ?",
+                    "Confirmation",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Medicament unMedicament = new Medicament((int)cbxSupMed.SelectedValue);
                     GestionMedicaments.SupprimerMedicament(unMedicament);
                     MessageBox.Show("Le médicament a bien été supprimé");
+                    List<Medicament> liste = new List<Medicament>();
+                    liste = GestionMedicaments.ObtenirMedicaments();
+
+                    cbxSupMed.ValueMember = "Id";
+                    cbxSupMed.DisplayMember = "Libelle";
+                    cbxSupMed.DataSource = liste;
                 }
             }
 

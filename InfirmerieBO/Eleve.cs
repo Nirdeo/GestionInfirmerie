@@ -4,6 +4,7 @@ namespace InfirmerieBO
 {
     public class Eleve
     {
+        private Classe Classe_eleve;
         private string Commentaire_sante_eleve;
         private DateTime Date_de_naissance_eleve;
         private int Id_classe_eleve;
@@ -14,7 +15,6 @@ namespace InfirmerieBO
         private string Telephone_eleve;
         private string Telephone_parent_eleve;
         private bool Tiers_temps_eleve;
-        private Classe Classe_eleve;
 
         public Eleve(int id_eleve)
         {

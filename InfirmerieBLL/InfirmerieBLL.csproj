@@ -45,6 +45,7 @@
     <Compile Include="GestionClasses.cs" />
     <Compile Include="GestionEleves.cs" />
     <Compile Include="GestionMedicaments.cs" />
+    <Compile Include="GestionQuantiteMedicaments.cs" />
     <Compile Include="GestionUtilisateurs.cs" />
     <Compile Include="GestionVisites.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

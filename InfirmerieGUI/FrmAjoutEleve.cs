@@ -32,11 +32,11 @@ namespace InfirmerieGUI
                 !string.IsNullOrEmpty(txtComSanEle.Text) || !string.IsNullOrEmpty(cbxClaEle.Text))
             {
                 DialogResult dialogResult = MessageBox.Show("Voulez-vous ajouter l'élève sélectionné ?", "Confirmation",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Eleve unEleve = new Eleve(txtNomEle.Text, txtPrenEle.Text, dtpDatNaiEle.Value, txtNumEle.Text,
-                    txtNumParEle.Text, chkTieTemEle.Checked, txtComSanEle.Text, (int)cbxClaEle.SelectedValue);
+                        txtNumParEle.Text, chkTieTemEle.Checked, txtComSanEle.Text, (int)cbxClaEle.SelectedValue);
                     GestionEleves.AjouterEleve(unEleve);
                     MessageBox.Show("L'élève a bien été ajouté");
                 }
