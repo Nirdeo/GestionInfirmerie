@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Configuration;
-using InfirmerieBO;
+using InfirmerieBO; // Référence la couche BO
 using InfirmerieDAL; // Référence la couche DAL
 
 namespace InfirmerieBLL
@@ -44,23 +43,22 @@ namespace InfirmerieBLL
             return EleveDAO.TrouverEleve(nomE);
         }
 
-        //// Méthode qui renvoi l’objet Eleve en l'ajoutant à la
-        //// BD avec la méthode AjoutEleve de la DAL
-        //public static int CreerEleve(Eleve el)
-        //{
-        //    return EleveDAO.AjoutEleve(el);
-        //}
+        // Méthode qui renvoi l’objet Eleve en l'ajoutant à la BD avec la méthode InsertEleve de la DAL
+        public static int AjouterEleve(Eleve unEleve)
+        {
+            return EleveDAO.InsertEleve(unEleve);
+        }
 
-        //// Méthode qui modifie un nouvel Eleve avec la méthode UpdateEleve de la DAL
-        //public static int ModifierEleve(Eleve el)
-        //{
-        //    return EleveDAO.UpdateEleve(el);
-        //}
+        // Méthode qui modifie un nouvel Eleve avec la méthode UpdateEleve de la DAL
+        public static int ModifierEleve(Eleve unEleve)
+        {
+            return EleveDAO.UpdateEleve(unEleve);
+        }
 
-        //// Méthode qui supprime un Eleve avec la méthode DeleteEleve de la DAL
-        //public static int SupprimerEleve(int id)
-        //{
-        //    return EleveDAO.DeleteEleve(id);
-        //}
+        // Méthode qui supprime un Eleve avec la méthode DeleteEleve de la DAL
+        public static int SupprimerEleve(Eleve unEleve)
+        {
+            return EleveDAO.DeleteEleve(unEleve);
+        }
     }
 }

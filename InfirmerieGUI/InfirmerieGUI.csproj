@@ -48,6 +48,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmTransitionEleve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTransitionEleve.Designer.cs">
+      <DependentUpon>FrmTransitionEleve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTransitionMedicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTransitionMedicament.Designer.cs">
+      <DependentUpon>FrmTransitionMedicament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAjoutEleve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjoutEleve.Designer.cs">
+      <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModificationEleve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificationEleve.Designer.cs">
+      <DependentUpon>FrmModificationEleve.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConsultationVisite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,11 +96,11 @@
     <Compile Include="FrmSuppressionMedicament.Designer.cs">
       <DependentUpon>FrmSuppressionMedicament.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModicationMedicament.cs">
+    <Compile Include="FrmModificationMedicament.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModicationMedicament.Designer.cs">
-      <DependentUpon>FrmModicationMedicament.cs</DependentUpon>
+    <Compile Include="FrmModificationMedicament.Designer.cs">
+      <DependentUpon>FrmModificationMedicament.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmConsultationMedicament.cs">
       <SubType>Form</SubType>
@@ -89,12 +113,6 @@
     </Compile>
     <Compile Include="FrmAjoutMedicament.Designer.cs">
       <DependentUpon>FrmAjoutMedicament.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAjoutEleve.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAjoutEleve.Designer.cs">
-      <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAuthentification.cs">
       <SubType>Form</SubType>
@@ -114,22 +132,31 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModificationEleve.cs">
+    <Compile Include="FrmSuppressionEleve.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModificationEleve.Designer.cs">
-      <DependentUpon>FrmModificationEleve.cs</DependentUpon>
+    <Compile Include="FrmSuppressionEleve.Designer.cs">
+      <DependentUpon>FrmSuppressionEleve.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSupressionEleve.cs">
+    <Compile Include="FrmTransitionVisite.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSupressionEleve.Designer.cs">
-      <DependentUpon>FrmSupressionEleve.cs</DependentUpon>
+    <Compile Include="FrmTransitionVisite.Designer.cs">
+      <DependentUpon>FrmTransitionVisite.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAjoutEleve.resx">
       <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificationEleve.resx">
+      <DependentUpon>FrmModificationEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAjoutMedicament.resx">
+      <DependentUpon>FrmAjoutMedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAjoutVisite.resx">
+      <DependentUpon>FrmAjoutVisite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAuthentification.resx">
       <DependentUpon>FrmAuthentification.cs</DependentUpon>
@@ -137,14 +164,35 @@
     <EmbeddedResource Include="FrmConsultationEleve.resx">
       <DependentUpon>FrmConsultationEleve.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultationMedicament.resx">
+      <DependentUpon>FrmConsultationMedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultationVisite.resx">
+      <DependentUpon>FrmConsultationVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModificationEleve.resx">
-      <DependentUpon>FrmModificationEleve.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModificationMedicament.resx">
+      <DependentUpon>FrmModificationMedicament.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSupressionEleve.resx">
-      <DependentUpon>FrmSupressionEleve.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModificationVisite.resx">
+      <DependentUpon>FrmModificationVisite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuppressionMedicament.resx">
+      <DependentUpon>FrmSuppressionMedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuppressionEleve.resx">
+      <DependentUpon>FrmSuppressionEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransitionEleve.resx">
+      <DependentUpon>FrmTransitionEleve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransitionMedicament.resx">
+      <DependentUpon>FrmTransitionMedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransitionVisite.resx">
+      <DependentUpon>FrmTransitionVisite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

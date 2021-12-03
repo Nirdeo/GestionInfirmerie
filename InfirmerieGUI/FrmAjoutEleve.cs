@@ -1,36 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
+using System.Configuration;
 using System.Windows.Forms;
 using InfirmerieBLL; // Référence la couche BLL
 using InfirmerieBO; // Référence la couche BO
 
 namespace InfirmerieGUI
 {
-    public partial class frmAjoutEleve : Form
+    public partial class FrmAjoutEleve : Form
     {
-        public frmAjoutEleve()
+        public FrmAjoutEleve()
         {
             InitializeComponent();
-            /*List<Classe> classes = GestionEleves.GetClasses();
-            lst_cls.DataSource = classes;*/
+            // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
+            GestionEleves.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Infirmerie"]);
+            List<Classe> liste = new List<Classe>();
+            liste = GestionClasses.ObtenirClasses();
+
+            cbxClaEle.ValueMember = "Id";
+            cbxClaEle.DisplayMember = "Libelle";
+            cbxClaEle.DataSource = liste;
+
+            chkTieTemEle.CheckState = CheckState.Unchecked;
         }
 
-        private void btn_elv_Click(object sender, EventArgs e)
+        private void btnAjoEle_Click(object sender, EventArgs e)
         {
-            /*Eleve eleve = new Eleve(txt_nom.Text, txt_prn.Text, txt_tel_elv.Text, txt_tel_prt.Text, txt_com.Text,
-                chk_tier.Checked, date_elv.Value,
-                new Classe(((Classe)lst_cls.SelectedItem).Id, ((Classe)lst_cls.SelectedItem).Libelle));
-            GestionEleves.InsertEleve(eleve);
-            this.Close();
-            Thread th = new Thread(x => Application.Run(new Eleves()));
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();*/
+            if (!string.IsNullOrEmpty(txtNomEle.Text) || !string.IsNullOrEmpty(txtPrenEle.Text) ||
+                !string.IsNullOrEmpty(dtpDatNaiEle.Text) || !string.IsNullOrEmpty(txtNumEle.Text) ||
+                !string.IsNullOrEmpty(txtNumParEle.Text) || !string.IsNullOrEmpty(chkTieTemEle.Text) ||
+                !string.IsNullOrEmpty(txtComSanEle.Text) || !string.IsNullOrEmpty(cbxClaEle.Text))
+            {
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous ajouter l'élève sélectionné ?", "Confirmation",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Eleve unEleve = new Eleve(txtNomEle.Text, txtPrenEle.Text, dtpDatNaiEle.Value, txtNumEle.Text,
+                    txtNumParEle.Text, chkTieTemEle.Checked, txtComSanEle.Text, (int)cbxClaEle.SelectedValue);
+                    GestionEleves.AjouterEleve(unEleve);
+                    MessageBox.Show("L'élève a bien été ajouté");
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Veuillez remplir les champs");
+            }
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
         {
             this.Close();
+            FrmMenu FrmMenu;
+            FrmMenu = new FrmMenu();
+            FrmMenu.Show();
         }
     }
 }

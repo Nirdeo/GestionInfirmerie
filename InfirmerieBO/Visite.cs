@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InfirmerieBO
 {
-    internal class Visite
+    public class Visite
     {
     }
 }

@@ -5,9 +5,9 @@ using InfirmerieBLL; // Référence la couche BLL
 
 namespace InfirmerieGUI
 {
-    public partial class frmAuthentification : Form
+    public partial class FrmAuthentification : Form
     {
-        public frmAuthentification()
+        public FrmAuthentification()
         {
             InitializeComponent();
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
@@ -16,25 +16,37 @@ namespace InfirmerieGUI
 
         private void btnValider_Click(object sender, EventArgs e)
         {
-            if (GestionUtilisateurs.AcceptationUtilisateur(txtLogin.Text, txtMdp.Text) == true)
+            if (!string.IsNullOrEmpty(txtLogin.Text) && !string.IsNullOrEmpty(txtMdp.Text))
             {
-                frmMenu FrmMenu = new frmMenu();
-                FrmMenu.Show();
-                this.Hide();
-            }
+                if (GestionUtilisateurs.AcceptationUtilisateur(txtLogin.Text, txtMdp.Text) == true)
+                {
+                    FrmMenu FrmMenu = new FrmMenu();
+                    FrmMenu.Show();
+                    this.Hide();
+                }
 
+                else
+                {
+                    MessageBox.Show("Votre login ou votre mot de passe est incorrect !", "Erreur", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    txtLogin.Clear();
+                    txtMdp.Clear();
+                }
+            }
             else
             {
-                MessageBox.Show("Votre login ou votre mot de passe est incorrect !", "Erreur", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                txtLogin.Clear();
-                txtMdp.Clear();
+                MessageBox.Show("Veuillez écrire un login et un mot de passe");
             }
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("Voulez-vous quitter l'application  ?", "Confirmation",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

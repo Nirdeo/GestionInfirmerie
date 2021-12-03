@@ -1,6 +1,6 @@
 ﻿namespace InfirmerieGUI
 {
-    partial class frmAuthentification
+    partial class FrmAuthentification
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuthentification));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAuthentification));
             this.btnValider = new System.Windows.Forms.Button();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblMdp = new System.Windows.Forms.Label();
@@ -102,7 +102,7 @@
             this.lblTitre.TabIndex = 7;
             this.lblTitre.Text = "S\'authentifier";
             // 
-            // frmAuthentification
+            // FrmAuthentification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,7 +115,7 @@
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.btnValider);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmAuthentification";
+            this.Name = "FrmAuthentification";
             this.Text = "Gestion Infirmerie";
             this.ResumeLayout(false);
             this.PerformLayout();

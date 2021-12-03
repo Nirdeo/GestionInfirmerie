@@ -48,7 +48,7 @@ VALUES
 GO
 -- Insertion de données dans la table comme jeu d'essai
 INSERT INTO T_Eleve
-    (Nom_eleve, Prenom_eleve, Date_de_naissance_eleve, Telephone_eleve, Telephone_parent_eleve, Tier_temps_eleve, Commentaire_sante_eleve, Id_classe_eleve)
+    (Nom_eleve, Prenom_eleve, Date_de_naissance_eleve, Telephone_eleve, Telephone_parent_eleve, Tiers_temps_eleve, Commentaire_sante_eleve, Id_classe_eleve)
 VALUES
     ('Dama', 'Thomas', '2005-11-20', 0784251498, 0687951236, 1, 'Allergie', 10),
     ('Charles', 'Jean', '2008-04-23', 0778536915, 0674862536, 0, 'RAS', 1),

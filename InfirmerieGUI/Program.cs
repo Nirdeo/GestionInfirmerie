@@ -13,7 +13,7 @@ namespace InfirmerieGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAuthentification());
+            Application.Run(new FrmAuthentification());
         }
     }
 }

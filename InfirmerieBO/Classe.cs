@@ -5,7 +5,15 @@
         private int Id_classe;
         private string Libelle_classe;
 
-        // Constructeur
+        public Classe()
+        {
+        }
+
+        public Classe(int id_classe)
+        {
+            Id_classe = id_classe;
+        }
+
         public Classe(string libelle_classe)
         {
             Libelle_classe = libelle_classe;
@@ -17,7 +25,6 @@
             Libelle_classe = libelle_classe;
         }
 
-        // Getters et Setters
         public int Id
         {
             get => Id_classe;

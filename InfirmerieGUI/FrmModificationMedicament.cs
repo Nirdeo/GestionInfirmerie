@@ -7,32 +7,30 @@ using InfirmerieBO; // Référence la couche BO
 
 namespace InfirmerieGUI
 {
-    public partial class FrmSuppressionMedicament : Form
+    public partial class FrmModificationMedicament : Form
     {
-        public FrmSuppressionMedicament()
+        public int id;
+        public FrmModificationMedicament(Medicament unMedicament)
         {
             InitializeComponent();
+            id = unMedicament.Id;
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
             GestionMedicaments.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Infirmerie"]);
-            List<Medicament> liste = new List<Medicament>();
-            liste = GestionMedicaments.ObtenirMedicaments();
 
-            cbxSupMed.ValueMember = "Id";
-            cbxSupMed.DisplayMember = "Libelle";
-            cbxSupMed.DataSource = liste;
+            txtNomMed.Text = unMedicament.Libelle;
         }
 
-        private void btnSupMed_Click(object sender, EventArgs e)
+        private void btnModMed_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(cbxSupMed.Text))
+            if (!string.IsNullOrEmpty(txtNomMed.Text))
             {
-                DialogResult dialogResult = MessageBox.Show("Voulez-vous supprimer le médicament sélectionné ?", "Confirmation",
+                DialogResult dialogResult = MessageBox.Show("Voulez-vous modifier le médicament sélectionné ?", "Confirmation",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Medicament unMedicament = new Medicament((int)cbxSupMed.SelectedValue);
-                    GestionMedicaments.SupprimerMedicament(unMedicament);
-                    MessageBox.Show("Le médicament a bien été supprimé");
+                    Medicament unMedicament = new Medicament(id, txtNomMed.Text);
+                    GestionMedicaments.ModifierMedicament(unMedicament);
+                    MessageBox.Show("Le médicament a bien été modifié");
                 }
             }
 

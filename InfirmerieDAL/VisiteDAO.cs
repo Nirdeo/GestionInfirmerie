@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InfirmerieDAL
 {
-    internal class VisiteDAO
+    public class VisiteDAO
     {
     }
 }

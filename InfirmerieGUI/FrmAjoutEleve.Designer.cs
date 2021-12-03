@@ -1,7 +1,6 @@
-﻿
-namespace InfirmerieGUI
+﻿namespace InfirmerieGUI
 {
-    partial class frmAjoutEleve
+    partial class FrmAjoutEleve
     {
         /// <summary>
         /// Required designer variable.
@@ -29,250 +28,217 @@ namespace InfirmerieGUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAjoutEleve));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAjoutEleve));
+            this.lblNomEle = new System.Windows.Forms.Label();
+            this.lblDatNaiEle = new System.Windows.Forms.Label();
+            this.lblPrenEle = new System.Windows.Forms.Label();
+            this.lblNumEle = new System.Windows.Forms.Label();
+            this.lblNumParEle = new System.Windows.Forms.Label();
+            this.lblTieTemEle = new System.Windows.Forms.Label();
+            this.lblClaEle = new System.Windows.Forms.Label();
+            this.lblComSanEle = new System.Windows.Forms.Label();
             this.btnRetour = new System.Windows.Forms.Button();
-            this.btn_elv = new System.Windows.Forms.Button();
-            this.chk_tier = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_tel_elv = new System.Windows.Forms.TextBox();
-            this.txt_tel_prt = new System.Windows.Forms.TextBox();
-            this.txt_nom = new System.Windows.Forms.TextBox();
-            this.txt_prn = new System.Windows.Forms.TextBox();
-            this.lst_cls = new System.Windows.Forms.ComboBox();
-            this.txt_com = new System.Windows.Forms.TextBox();
-            this.date_elv = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnAjoEle = new System.Windows.Forms.Button();
+            this.txtComSanEle = new System.Windows.Forms.RichTextBox();
+            this.dtpDatNaiEle = new System.Windows.Forms.DateTimePicker();
+            this.chkTieTemEle = new System.Windows.Forms.CheckBox();
+            this.txtPrenEle = new System.Windows.Forms.TextBox();
+            this.txtNumEle = new System.Windows.Forms.TextBox();
+            this.txtNumParEle = new System.Windows.Forms.TextBox();
+            this.cbxClaEle = new System.Windows.Forms.ComboBox();
+            this.txtNomEle = new System.Windows.Forms.TextBox();
             this.lblTitre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
+            // lblNomEle
+            // 
+            this.lblNomEle.AutoSize = true;
+            this.lblNomEle.Location = new System.Drawing.Point(12, 138);
+            this.lblNomEle.Name = "lblNomEle";
+            this.lblNomEle.Size = new System.Drawing.Size(104, 16);
+            this.lblNomEle.TabIndex = 0;
+            this.lblNomEle.Text = "Nom de l\'élève :";
+            // 
+            // lblDatNaiEle
+            // 
+            this.lblDatNaiEle.AutoSize = true;
+            this.lblDatNaiEle.Location = new System.Drawing.Point(12, 248);
+            this.lblDatNaiEle.Name = "lblDatNaiEle";
+            this.lblDatNaiEle.Size = new System.Drawing.Size(188, 16);
+            this.lblDatNaiEle.TabIndex = 1;
+            this.lblDatNaiEle.Text = "Date de naissance de l\'élève :";
+            // 
+            // lblPrenEle
+            // 
+            this.lblPrenEle.AutoSize = true;
+            this.lblPrenEle.Location = new System.Drawing.Point(12, 182);
+            this.lblPrenEle.Name = "lblPrenEle";
+            this.lblPrenEle.Size = new System.Drawing.Size(122, 16);
+            this.lblPrenEle.TabIndex = 2;
+            this.lblPrenEle.Text = "Prénom de l\'élève :";
+            // 
+            // lblNumEle
+            // 
+            this.lblNumEle.AutoSize = true;
+            this.lblNumEle.Location = new System.Drawing.Point(12, 301);
+            this.lblNumEle.Name = "lblNumEle";
+            this.lblNumEle.Size = new System.Drawing.Size(205, 16);
+            this.lblNumEle.TabIndex = 3;
+            this.lblNumEle.Text = "Numéro de téléphone de l\'élève :";
+            // 
+            // lblNumParEle
+            // 
+            this.lblNumParEle.AutoSize = true;
+            this.lblNumParEle.Location = new System.Drawing.Point(12, 354);
+            this.lblNumParEle.Name = "lblNumParEle";
+            this.lblNumParEle.Size = new System.Drawing.Size(202, 16);
+            this.lblNumParEle.TabIndex = 4;
+            this.lblNumParEle.Text = "Numéro de téléphone du parent :";
+            // 
+            // lblTieTemEle
+            // 
+            this.lblTieTemEle.AutoSize = true;
+            this.lblTieTemEle.Location = new System.Drawing.Point(431, 140);
+            this.lblTieTemEle.Name = "lblTieTemEle";
+            this.lblTieTemEle.Size = new System.Drawing.Size(84, 16);
+            this.lblTieTemEle.TabIndex = 5;
+            this.lblTieTemEle.Text = "Tiers temps :";
+            // 
+            // lblClaEle
+            // 
+            this.lblClaEle.AutoSize = true;
+            this.lblClaEle.Location = new System.Drawing.Point(437, 321);
+            this.lblClaEle.Name = "lblClaEle";
+            this.lblClaEle.Size = new System.Drawing.Size(117, 16);
+            this.lblClaEle.TabIndex = 6;
+            this.lblClaEle.Text = "Classe de l\'élève :";
+            // 
+            // lblComSanEle
+            // 
+            this.lblComSanEle.AutoSize = true;
+            this.lblComSanEle.Location = new System.Drawing.Point(431, 185);
+            this.lblComSanEle.Name = "lblComSanEle";
+            this.lblComSanEle.Size = new System.Drawing.Size(129, 16);
+            this.lblComSanEle.TabIndex = 7;
+            this.lblComSanEle.Text = "Commentaire santé :";
+            // 
             // btnRetour
             // 
-            this.btnRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.btnRetour.Location = new System.Drawing.Point(12, 668);
+            this.btnRetour.Location = new System.Drawing.Point(32, 404);
             this.btnRetour.Name = "btnRetour";
-            this.btnRetour.Size = new System.Drawing.Size(144, 41);
-            this.btnRetour.TabIndex = 44;
+            this.btnRetour.Size = new System.Drawing.Size(75, 23);
+            this.btnRetour.TabIndex = 8;
             this.btnRetour.Text = "Retour";
             this.btnRetour.UseVisualStyleBackColor = true;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
-            // btn_elv
+            // btnAjoEle
             // 
-            this.btn_elv.AutoSize = true;
-            this.btn_elv.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.btn_elv.Location = new System.Drawing.Point(409, 623);
-            this.btn_elv.Name = "btn_elv";
-            this.btn_elv.Size = new System.Drawing.Size(241, 46);
-            this.btn_elv.TabIndex = 45;
-            this.btn_elv.Text = "Ajouter un élève";
-            this.btn_elv.UseVisualStyleBackColor = true;
-            this.btn_elv.Click += new System.EventHandler(this.btn_elv_Click);
+            this.btnAjoEle.Location = new System.Drawing.Point(584, 385);
+            this.btnAjoEle.Name = "btnAjoEle";
+            this.btnAjoEle.Size = new System.Drawing.Size(75, 23);
+            this.btnAjoEle.TabIndex = 9;
+            this.btnAjoEle.Text = "Ajouter";
+            this.btnAjoEle.UseVisualStyleBackColor = true;
+            this.btnAjoEle.Click += new System.EventHandler(this.btnAjoEle_Click);
             // 
-            // chk_tier
+            // txtComSanEle
             // 
-            this.chk_tier.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chk_tier.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk_tier.Location = new System.Drawing.Point(395, 506);
-            this.chk_tier.Name = "chk_tier";
-            this.chk_tier.Size = new System.Drawing.Size(580, 41);
-            this.chk_tier.TabIndex = 92;
-            this.chk_tier.UseVisualStyleBackColor = true;
+            this.txtComSanEle.Location = new System.Drawing.Point(560, 185);
+            this.txtComSanEle.Name = "txtComSanEle";
+            this.txtComSanEle.Size = new System.Drawing.Size(195, 96);
+            this.txtComSanEle.TabIndex = 12;
+            this.txtComSanEle.Text = "";
             // 
-            // label5
+            // dtpDatNaiEle
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label5.Location = new System.Drawing.Point(31, 506);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 36);
-            this.label5.TabIndex = 91;
-            this.label5.Text = "Tier Temps";
+            this.dtpDatNaiEle.Location = new System.Drawing.Point(206, 248);
+            this.dtpDatNaiEle.Name = "dtpDatNaiEle";
+            this.dtpDatNaiEle.Size = new System.Drawing.Size(200, 22);
+            this.dtpDatNaiEle.TabIndex = 15;
             // 
-            // txt_tel_elv
+            // chkTieTemEle
             // 
-            this.txt_tel_elv.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txt_tel_elv.Location = new System.Drawing.Point(395, 449);
-            this.txt_tel_elv.Name = "txt_tel_elv";
-            this.txt_tel_elv.Size = new System.Drawing.Size(580, 41);
-            this.txt_tel_elv.TabIndex = 90;
+            this.chkTieTemEle.AutoSize = true;
+            this.chkTieTemEle.Location = new System.Drawing.Point(560, 138);
+            this.chkTieTemEle.Name = "chkTieTemEle";
+            this.chkTieTemEle.Size = new System.Drawing.Size(18, 17);
+            this.chkTieTemEle.TabIndex = 16;
+            this.chkTieTemEle.UseVisualStyleBackColor = true;
             // 
-            // txt_tel_prt
+            // txtPrenEle
             // 
-            this.txt_tel_prt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txt_tel_prt.Location = new System.Drawing.Point(395, 396);
-            this.txt_tel_prt.Name = "txt_tel_prt";
-            this.txt_tel_prt.Size = new System.Drawing.Size(580, 41);
-            this.txt_tel_prt.TabIndex = 89;
+            this.txtPrenEle.Location = new System.Drawing.Point(223, 185);
+            this.txtPrenEle.Name = "txtPrenEle";
+            this.txtPrenEle.Size = new System.Drawing.Size(100, 22);
+            this.txtPrenEle.TabIndex = 18;
             // 
-            // txt_nom
+            // txtNumEle
             // 
-            this.txt_nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txt_nom.Location = new System.Drawing.Point(395, 143);
-            this.txt_nom.Name = "txt_nom";
-            this.txt_nom.Size = new System.Drawing.Size(580, 41);
-            this.txt_nom.TabIndex = 88;
+            this.txtNumEle.Location = new System.Drawing.Point(223, 301);
+            this.txtNumEle.Name = "txtNumEle";
+            this.txtNumEle.Size = new System.Drawing.Size(100, 22);
+            this.txtNumEle.TabIndex = 19;
             // 
-            // txt_prn
+            // txtNumParEle
             // 
-            this.txt_prn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txt_prn.Location = new System.Drawing.Point(395, 95);
-            this.txt_prn.Name = "txt_prn";
-            this.txt_prn.Size = new System.Drawing.Size(580, 41);
-            this.txt_prn.TabIndex = 87;
+            this.txtNumParEle.Location = new System.Drawing.Point(223, 351);
+            this.txtNumParEle.Name = "txtNumParEle";
+            this.txtNumParEle.Size = new System.Drawing.Size(100, 22);
+            this.txtNumParEle.TabIndex = 20;
             // 
-            // lst_cls
+            // cbxClaEle
             // 
-            this.lst_cls.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.lst_cls.FormattingEnabled = true;
-            this.lst_cls.Items.AddRange(new object[] {
-            "Seconde 1",
-            "Seconde 2",
-            "Seconde 3",
-            "Première 1",
-            "Première 2",
-            "Première 3",
-            "Terminale 1",
-            "Terminale 2",
-            "Terminale 3",
-            "BTS 1"});
-            this.lst_cls.Location = new System.Drawing.Point(395, 193);
-            this.lst_cls.Name = "lst_cls";
-            this.lst_cls.Size = new System.Drawing.Size(580, 44);
-            this.lst_cls.TabIndex = 86;
+            this.cbxClaEle.FormattingEnabled = true;
+            this.cbxClaEle.Location = new System.Drawing.Point(560, 313);
+            this.cbxClaEle.Name = "cbxClaEle";
+            this.cbxClaEle.Size = new System.Drawing.Size(121, 24);
+            this.cbxClaEle.TabIndex = 21;
             // 
-            // txt_com
+            // txtNomEle
             // 
-            this.txt_com.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txt_com.Location = new System.Drawing.Point(395, 296);
-            this.txt_com.Multiline = true;
-            this.txt_com.Name = "txt_com";
-            this.txt_com.Size = new System.Drawing.Size(580, 84);
-            this.txt_com.TabIndex = 85;
-            // 
-            // date_elv
-            // 
-            this.date_elv.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.date_elv.Location = new System.Drawing.Point(395, 247);
-            this.date_elv.Name = "date_elv";
-            this.date_elv.Size = new System.Drawing.Size(580, 41);
-            this.date_elv.TabIndex = 84;
-            this.date_elv.Value = new System.DateTime(2021, 11, 19, 0, 0, 0, 0);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label4.Location = new System.Drawing.Point(31, 449);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(234, 36);
-            this.label4.TabIndex = 83;
-            this.label4.Text = "Téléphone élève";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label2.Location = new System.Drawing.Point(31, 396);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(248, 36);
-            this.label2.TabIndex = 82;
-            this.label2.Text = "Téléphone parent";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label8.Location = new System.Drawing.Point(31, 146);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(209, 36);
-            this.label8.TabIndex = 81;
-            this.label8.Text = "Nom de l\'élève";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label9.Location = new System.Drawing.Point(31, 98);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(250, 36);
-            this.label9.TabIndex = 80;
-            this.label9.Text = "Prénom de l\'élève";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label6.Location = new System.Drawing.Point(31, 299);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(269, 36);
-            this.label6.TabIndex = 79;
-            this.label6.Text = "Commentaire santé";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label3.Location = new System.Drawing.Point(31, 251);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(259, 36);
-            this.label3.TabIndex = 78;
-            this.label3.Text = "Date de naissance";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.label1.Location = new System.Drawing.Point(31, 196);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 36);
-            this.label1.TabIndex = 77;
-            this.label1.Text = "Classe";
+            this.txtNomEle.Location = new System.Drawing.Point(223, 132);
+            this.txtNomEle.Name = "txtNomEle";
+            this.txtNomEle.Size = new System.Drawing.Size(100, 22);
+            this.txtNomEle.TabIndex = 22;
             // 
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
             this.lblTitre.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTitre.Location = new System.Drawing.Point(357, 9);
+            this.lblTitre.Location = new System.Drawing.Point(320, 18);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(156, 24);
-            this.lblTitre.TabIndex = 93;
+            this.lblTitre.TabIndex = 23;
             this.lblTitre.Text = "Ajouter un élève";
             // 
-            // frmAjoutEleve
+            // FrmAjoutEleve
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 721);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblTitre);
-            this.Controls.Add(this.chk_tier);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_tel_elv);
-            this.Controls.Add(this.txt_tel_prt);
-            this.Controls.Add(this.txt_nom);
-            this.Controls.Add(this.txt_prn);
-            this.Controls.Add(this.lst_cls);
-            this.Controls.Add(this.txt_com);
-            this.Controls.Add(this.date_elv);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_elv);
+            this.Controls.Add(this.txtNomEle);
+            this.Controls.Add(this.cbxClaEle);
+            this.Controls.Add(this.txtNumParEle);
+            this.Controls.Add(this.txtNumEle);
+            this.Controls.Add(this.txtPrenEle);
+            this.Controls.Add(this.chkTieTemEle);
+            this.Controls.Add(this.dtpDatNaiEle);
+            this.Controls.Add(this.txtComSanEle);
+            this.Controls.Add(this.btnAjoEle);
             this.Controls.Add(this.btnRetour);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.Controls.Add(this.lblComSanEle);
+            this.Controls.Add(this.lblClaEle);
+            this.Controls.Add(this.lblTieTemEle);
+            this.Controls.Add(this.lblNumParEle);
+            this.Controls.Add(this.lblNumEle);
+            this.Controls.Add(this.lblPrenEle);
+            this.Controls.Add(this.lblDatNaiEle);
+            this.Controls.Add(this.lblNomEle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.Name = "frmAjoutEleve";
+            this.Name = "FrmAjoutEleve";
             this.Text = "Gestion Infirmerie";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -280,24 +246,25 @@ namespace InfirmerieGUI
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblNomEle;
+        private System.Windows.Forms.Label lblDatNaiEle;
+        private System.Windows.Forms.Label lblPrenEle;
+        private System.Windows.Forms.Label lblNumEle;
+        private System.Windows.Forms.Label lblNumParEle;
+        private System.Windows.Forms.Label lblTieTemEle;
+        private System.Windows.Forms.Label lblClaEle;
+        private System.Windows.Forms.Label lblComSanEle;
         private System.Windows.Forms.Button btnRetour;
-        private System.Windows.Forms.Button btn_elv;
-        private System.Windows.Forms.CheckBox chk_tier;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_tel_elv;
-        private System.Windows.Forms.TextBox txt_tel_prt;
-        private System.Windows.Forms.TextBox txt_nom;
-        private System.Windows.Forms.TextBox txt_prn;
-        private System.Windows.Forms.ComboBox lst_cls;
-        private System.Windows.Forms.TextBox txt_com;
-        private System.Windows.Forms.DateTimePicker date_elv;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAjoEle;
+        private System.Windows.Forms.RichTextBox txtComSanEle;
+        private System.Windows.Forms.DateTimePicker dtpDatNaiEle;
+        private System.Windows.Forms.CheckBox chkTieTemEle;
+        private System.Windows.Forms.TextBox txtPrenEle;
+        private System.Windows.Forms.TextBox txtNumEle;
+        private System.Windows.Forms.TextBox txtNumParEle;
+        private System.Windows.Forms.ComboBox cbxClaEle;
+        private System.Windows.Forms.TextBox txtNomEle;
         private System.Windows.Forms.Label lblTitre;
     }
 }

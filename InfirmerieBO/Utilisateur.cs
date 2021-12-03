@@ -6,7 +6,6 @@
         private string Login_utilisateur;
         private string Mdp_utilisateur;
 
-        // Constructeur
         public Utilisateur(int id_utilisateur, string login_utilisateur, string mdp_utilisateur)
         {
             Id_utilisateur = id_utilisateur;
@@ -14,7 +13,6 @@
             Mdp_utilisateur = mdp_utilisateur;
         }
 
-        // Getters et Setters
         public int Id
         {
             get => Id_utilisateur;

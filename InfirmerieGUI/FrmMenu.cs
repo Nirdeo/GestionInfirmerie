@@ -3,44 +3,109 @@ using System.Windows.Forms;
 
 namespace InfirmerieGUI
 {
-    public partial class frmMenu : Form
+    public partial class FrmMenu : Form
     {
-        public frmMenu()
+        public FrmMenu()
         {
             InitializeComponent();
         }
 
         private void btnConE_Click(object sender, EventArgs e)
         {
-            frmConsultationEleve FrmListeEleves;
-            FrmListeEleves = new frmConsultationEleve();
-            FrmListeEleves.ShowDialog();
-        }
-
-        private void btnQuitter_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            this.Hide();
+            FrmConsultationEleve FrmConEleve;
+            FrmConEleve = new FrmConsultationEleve();
+            FrmConEleve.Show();
         }
 
         private void btnAjoE_Click(object sender, EventArgs e)
         {
-            frmAjoutEleve FrmAjoEleves;
-            FrmAjoEleves = new frmAjoutEleve();
-            FrmAjoEleves.ShowDialog();
+            this.Hide();
+            FrmAjoutEleve FrmAjoEleve;
+            FrmAjoEleve = new FrmAjoutEleve();
+            FrmAjoEleve.Show();
         }
 
         private void btnModE_Click(object sender, EventArgs e)
         {
-            frmModificationEleve FrmModEleves;
-            FrmModEleves = new frmModificationEleve();
-            FrmModEleves.ShowDialog();
+            this.Hide();
+            FrmTransitionEleve FrmTraEleve;
+            FrmTraEleve = new FrmTransitionEleve();
+            FrmTraEleve.Show();
         }
 
         private void btnSupE_Click(object sender, EventArgs e)
         {
-            frmSupressionEleve FrmSupEleves;
-            FrmSupEleves = new frmSupressionEleve();
-            FrmSupEleves.ShowDialog();
+            this.Hide();
+            FrmSuppressionEleve FrmSupEleve;
+            FrmSupEleve = new FrmSuppressionEleve();
+            FrmSupEleve.Show();
+        }
+
+        private void btnConV_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmConsultationVisite FrmConVisite;
+            FrmConVisite = new FrmConsultationVisite();
+            FrmConVisite.Show();
+        }
+
+        private void btnAjoV_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAjoutVisite FrmAjoVisite;
+            FrmAjoVisite = new FrmAjoutVisite();
+            FrmAjoVisite.Show();
+        }
+
+        private void btnModV_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmModificationVisite FrmModVisite;
+            FrmModVisite = new FrmModificationVisite();
+            FrmModVisite.Show();
+        }
+
+        private void btnConM_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmConsultationMedicament FrmConMedicament;
+            FrmConMedicament = new FrmConsultationMedicament();
+            FrmConMedicament.Show();
+        }
+
+        private void btnAjoM_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAjoutMedicament FrmAjoMedicament;
+            FrmAjoMedicament = new FrmAjoutMedicament();
+            FrmAjoMedicament.Show();
+        }
+
+        private void btnModM_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmTransitionMedicament FrmTraMedicament;
+            FrmTraMedicament = new FrmTransitionMedicament();
+            FrmTraMedicament.Show();
+        }
+
+        private void btnSupM_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmSuppressionMedicament FrmSupMedicament;
+            FrmSupMedicament = new FrmSuppressionMedicament();
+            FrmSupMedicament.Show();
+        }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Voulez-vous quitter l'application  ?", "Confirmation",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -41,7 +41,7 @@ CREATE TABLE T_Eleve
     Date_de_naissance_eleve DATE NOT NULL,
     Telephone_eleve INT NOT NULL,
     Telephone_parent_eleve INT NOT NULL,
-    Tier_temps_eleve BIT NOT NULL,
+    Tiers_temps_eleve BIT NOT NULL,
     Commentaire_sante_eleve NVARCHAR(255) NOT NULL,
     Id_classe_eleve INT NOT NULL,
     CONSTRAINT pk_id_eleve PRIMARY KEY (Id_eleve),

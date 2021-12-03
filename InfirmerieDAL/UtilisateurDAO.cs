@@ -34,12 +34,12 @@ namespace InfirmerieDAL
             List<Utilisateur> lesUtilisateurs = new List<Utilisateur>();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = maConnexion;
-            cmd.Parameters.Add(new SqlParameter("@Param1", SqlDbType.NVarChar, 11));
-            cmd.Parameters["@Param1"].Value = loginU;
-            cmd.Parameters.Add(new SqlParameter("@Param2", SqlDbType.NVarChar, 11));
-            cmd.Parameters["@Param2"].Value = mdpU;
+            cmd.Parameters.Add(new SqlParameter("@Login", SqlDbType.NVarChar));
+            cmd.Parameters["@Login"].Value = loginU;
+            cmd.Parameters.Add(new SqlParameter("@Mdp", SqlDbType.NVarChar));
+            cmd.Parameters["@Mdp"].Value = mdpU;
             cmd.CommandText =
-                "SELECT * FROM T_Utilisateur WHERE Login_utilisateur = @Param1 AND Mdp_utilisateur = @Param2";
+                "SELECT * FROM T_Utilisateur WHERE Login_utilisateur = @Login AND Mdp_utilisateur = @Mdp";
             SqlDataReader monReader = cmd.ExecuteReader();
             // Remplissage de la liste
             while (monReader.Read())

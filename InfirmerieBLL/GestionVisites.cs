@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InfirmerieBLL
 {
-    internal class GestionVisites
+    public class GestionVisites
     {
     }
 }

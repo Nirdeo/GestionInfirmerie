@@ -1,4 +1,6 @@
-﻿using System.Configuration;
+﻿using System.Collections.Generic;
+using System.Configuration;
+using InfirmerieBO; // Référence la couche BLL
 using InfirmerieDAL; // Référence la couche DAL
 
 namespace InfirmerieBLL
@@ -23,6 +25,12 @@ namespace InfirmerieBLL
         {
             string chaine = chset.ConnectionString;
             ConnexionBD.GetConnexionBD().SetchaineConnexion(chaine);
+        }
+
+        // Méthode qui renvoit une List d'objets Classe en faisant appel à la méthode GetClasses() de la DAL
+        public static List<Classe> ObtenirClasses()
+        {
+            return ClasseDAO.GetClasses();
         }
     }
 }

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
 using System.Windows.Forms;
-using InfirmerieBLL; // Référence la couche BLL
+using InfirmerieBLL;
 using InfirmerieBO; // Référence la couche BO
 
 namespace InfirmerieGUI
 {
-    public partial class FrmConsultationEleve : Form
+    public partial class frmDetailsEleve : Form
     {
-        public FrmConsultationEleve()
+        public frmDetailsEleve()
         {
             InitializeComponent();
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
@@ -19,47 +19,55 @@ namespace InfirmerieGUI
             // Blocage de la génération automatique des colonnes
             dgvEleve.AutoGenerateColumns = false;
 
+
             // Création d'une en-tête de colonne pour la colonne 1
+            DataGridViewTextBoxColumn IdColumn = new DataGridViewTextBoxColumn();
+            IdColumn.DataPropertyName = "Id";
+            IdColumn.HeaderText = "Identifiant de l'élève";
+
+
+            // Création d'une en-tête de colonne pour la colonne 2
             DataGridViewTextBoxColumn NomColumn = new DataGridViewTextBoxColumn();
             NomColumn.DataPropertyName = "Nom";
             NomColumn.HeaderText = "Nom de l'élève";
 
-            // Création d'une en-tête de colonne pour la colonne 2
+            // Création d'une en-tête de colonne pour la colonne 3
             DataGridViewTextBoxColumn PrenomColumn = new DataGridViewTextBoxColumn();
             PrenomColumn.DataPropertyName = "Prenom";
             PrenomColumn.HeaderText = "Prénom de l'élève";
 
-            // Création d'une en-tête de colonne pour la colonne 3
+            // Création d'une en-tête de colonne pour la colonne 4
             DataGridViewTextBoxColumn DateNaissanceColumn = new DataGridViewTextBoxColumn();
             DateNaissanceColumn.DataPropertyName = "Date_de_naissance";
             DateNaissanceColumn.HeaderText = "Date de naissance de l'élève";
 
-            // Création d'une en-tête de colonne pour la colonne 4
+            // Création d'une en-tête de colonne pour la colonne 5
             DataGridViewTextBoxColumn TelephoneColumn = new DataGridViewTextBoxColumn();
             TelephoneColumn.DataPropertyName = "Telephone";
             TelephoneColumn.HeaderText = "Téléphone de l'élève";
 
-            // Création d'une en-tête de colonne pour la colonne 5
+            // Création d'une en-tête de colonne pour la colonne 6
             DataGridViewTextBoxColumn TelephoneParentColumn = new DataGridViewTextBoxColumn();
             TelephoneParentColumn.DataPropertyName = "Telephone_parent";
             TelephoneParentColumn.HeaderText = "Téléphone du parent de l'élève";
 
-            // Création d'une en-tête de colonne pour la colonne 6
-            DataGridViewTextBoxColumn TierTempsColumn = new DataGridViewTextBoxColumn();
-            TierTempsColumn.DataPropertyName = "Tiers_temps";
-            TierTempsColumn.HeaderText = "Tiers temps de l'élève";
-
             // Création d'une en-tête de colonne pour la colonne 7
+            DataGridViewTextBoxColumn TierTempsColumn = new DataGridViewTextBoxColumn();
+            TierTempsColumn.DataPropertyName = "Tier_temps";
+            TierTempsColumn.HeaderText = "Tier temps de l'élève";
+
+            // Création d'une en-tête de colonne pour la colonne 8
             DataGridViewTextBoxColumn CommentaireSanteColumn = new DataGridViewTextBoxColumn();
             CommentaireSanteColumn.DataPropertyName = "Commentaire_sante";
             CommentaireSanteColumn.HeaderText = "Commentaire santé de l'élève";
 
-            // Création d'une en-tête de colonne pour la colonne 8
+            // Création d'une en-tête de colonne pour la colonne 9
             DataGridViewTextBoxColumn LibelleClasseColumn = new DataGridViewTextBoxColumn();
             LibelleClasseColumn.DataPropertyName = "Libelle_classe";
-            LibelleClasseColumn.HeaderText = "Classe de l'élève";
+            LibelleClasseColumn.HeaderText = "Libelle de la classe de l'élève";
 
             // Ajout des 9 en-têtes de colonne au datagridview
+            dgvEleve.Columns.Add(IdColumn);
             dgvEleve.Columns.Add(NomColumn);
             dgvEleve.Columns.Add(PrenomColumn);
             dgvEleve.Columns.Add(DateNaissanceColumn);
@@ -86,16 +94,35 @@ namespace InfirmerieGUI
         private void btnRetour_Click(object sender, EventArgs e)
         {
             this.Close();
-            FrmMenu FrmMenu;
-            FrmMenu = new FrmMenu();
-            FrmMenu.Show();
         }
 
-        private void txtNom_TextChanged(object sender, EventArgs e)
+        private void btnValider_Click(object sender, EventArgs e)
         {
-            List<Eleve> liste = new List<Eleve>();
-            liste = GestionEleves.ChercherEleve(txtNom.Text);
-            dgvEleve.DataSource = liste;
+            if (!String.IsNullOrEmpty(txtNom.Text))
+            {
+                DialogResult dialogResult =
+                    MessageBox.Show("Voulez-vous chercher un élève portant le nom " + txtNom.Text + " ?",
+                        "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogResult == DialogResult.Yes && GestionEleves.AfficherEleve(txtNom.Text) == true)
+                {
+                    MessageBox.Show("Voici les résultats.");
+                    List<Eleve> liste = new List<Eleve>();
+                    liste = GestionEleves.ChercherEleve(txtNom.Text);
+                    dgvEleve.DataSource = liste;
+                }
+
+                if (GestionEleves.AfficherEleve(txtNom.Text) == false)
+                {
+                    MessageBox.Show("L'élève n'existe pas !", "Attention", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Aucun nom recherché");
+            }
         }
     }
 }
