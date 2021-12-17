@@ -34,6 +34,7 @@
             this.btnRetour = new System.Windows.Forms.Button();
             this.lblSupEle = new System.Windows.Forms.Label();
             this.cbxSupEle = new System.Windows.Forms.ComboBox();
+            this.lblSTitre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSupEle
@@ -51,7 +52,7 @@
             this.lblTitre.AutoSize = true;
             this.lblTitre.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitre.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblTitre.Location = new System.Drawing.Point(280, 9);
+            this.lblTitre.Location = new System.Drawing.Point(303, 9);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(180, 24);
             this.lblTitre.TabIndex = 6;
@@ -84,11 +85,23 @@
             this.cbxSupEle.Size = new System.Drawing.Size(144, 24);
             this.cbxSupEle.TabIndex = 9;
             // 
+            // lblSTitre
+            // 
+            this.lblSTitre.AutoSize = true;
+            this.lblSTitre.Font = new System.Drawing.Font("Lato", 10F);
+            this.lblSTitre.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblSTitre.Location = new System.Drawing.Point(141, 33);
+            this.lblSTitre.Name = "lblSTitre";
+            this.lblSTitre.Size = new System.Drawing.Size(456, 21);
+            this.lblSTitre.TabIndex = 10;
+            this.lblSTitre.Text = "(seulement dans le cas où un élève n’a effectué aucune visite)";
+            // 
             // FrmSuppressionEleve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSTitre);
             this.Controls.Add(this.cbxSupEle);
             this.Controls.Add(this.lblSupEle);
             this.Controls.Add(this.btnRetour);
@@ -109,5 +122,6 @@
         private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.Label lblSupEle;
         private System.Windows.Forms.ComboBox cbxSupEle;
+        private System.Windows.Forms.Label lblSTitre;
     }
 }

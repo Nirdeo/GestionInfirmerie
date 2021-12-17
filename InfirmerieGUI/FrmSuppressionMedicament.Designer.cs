@@ -34,6 +34,7 @@
             this.btnRetour = new System.Windows.Forms.Button();
             this.lblSupMed = new System.Windows.Forms.Label();
             this.lblTitre = new System.Windows.Forms.Label();
+            this.lblSTitre = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbxSupMed
@@ -84,11 +85,23 @@
             this.lblTitre.TabIndex = 9;
             this.lblTitre.Text = "Supprimer un médicament";
             // 
+            // lblSTitre
+            // 
+            this.lblSTitre.AutoSize = true;
+            this.lblSTitre.Font = new System.Drawing.Font("Lato", 10F);
+            this.lblSTitre.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lblSTitre.Location = new System.Drawing.Point(172, 33);
+            this.lblSTitre.Name = "lblSTitre";
+            this.lblSTitre.Size = new System.Drawing.Size(489, 21);
+            this.lblSTitre.TabIndex = 11;
+            this.lblSTitre.Text = "(seulement dans le cas où un médicament n’est lié à aucune visite)";
+            // 
             // FrmSuppressionMedicament
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSTitre);
             this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.lblSupMed);
             this.Controls.Add(this.btnRetour);
@@ -109,5 +122,6 @@
         private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.Label lblSupMed;
         private System.Windows.Forms.Label lblTitre;
+        private System.Windows.Forms.Label lblSTitre;
     }
 }

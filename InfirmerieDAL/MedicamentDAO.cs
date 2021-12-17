@@ -57,6 +57,41 @@ namespace InfirmerieDAL
             return lesMedicaments;
         }
 
+        public static List<Medicament> DelMedicament()
+        {
+            int id;
+            string libelle;
+            Medicament unMedicament;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            // Création d'une liste vide d'objets Medicaments
+            List<Medicament> lesMedicaments = new List<Medicament>();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM T_Medicament WHERE Id_medicament NOT IN (SELECT Id_medicament_quantite_medic FROM T_Quantite_Medic)";
+            SqlDataReader monReader = cmd.ExecuteReader();
+            // Remplissage de la liste
+            while (monReader.Read())
+            {
+                id = Int32.Parse(monReader["Id_medicament"].ToString());
+                if (monReader["Id_medicament"] == DBNull.Value)
+                {
+                    libelle = default(string);
+                }
+                else
+                {
+                    libelle = monReader["Libelle_medicament"].ToString();
+                }
+
+                unMedicament = new Medicament(id, libelle);
+                lesMedicaments.Add(unMedicament);
+            }
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return lesMedicaments;
+        }
+
         public static int InsertMedicament(Medicament unMedicament)
         {
             int nbEnr;

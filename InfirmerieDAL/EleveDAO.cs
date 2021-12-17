@@ -32,7 +32,7 @@ namespace InfirmerieDAL
             string telephone_parent;
             bool tiers_temps;
             string commentaire_sante;
-            string libelle_classe;
+            Classe classe;
             Eleve unEleve;
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
@@ -55,7 +55,7 @@ namespace InfirmerieDAL
                     telephone_parent = default(string);
                     tiers_temps = default(bool);
                     commentaire_sante = default(string);
-                    libelle_classe = default(string);
+                    classe = default(Classe);
                 }
                 else
                 {
@@ -66,11 +66,11 @@ namespace InfirmerieDAL
                     telephone_parent = monReader["Telephone_parent_eleve"].ToString();
                     tiers_temps = bool.Parse(monReader["Tiers_temps_eleve"].ToString());
                     commentaire_sante = monReader["Commentaire_sante_eleve"].ToString();
-                    libelle_classe = monReader["Libelle_classe"].ToString();
+                    classe = new Classe((int)monReader["Id_classe"], monReader["Libelle_classe"].ToString());
                 }
 
                 unEleve = new Eleve(id, nom, prenom, date_de_naissance, telephone, telephone_parent, tiers_temps,
-                    commentaire_sante, libelle_classe);
+                    commentaire_sante, classe);
                 lesEleves.Add(unEleve);
             }
 
@@ -78,6 +78,7 @@ namespace InfirmerieDAL
             maConnexion.Close();
             return lesEleves;
         }
+        
 
         // Cette méthode retourne une List contenant les objets Eleve contenus dans la table T_Eleve
         public static List<Eleve> ConsulterEleve(string nomE)
@@ -90,7 +91,7 @@ namespace InfirmerieDAL
             string telephone_parent;
             bool tiers_temps;
             string commentaire_sante;
-            string libelle_classe;
+            Classe classe;
             Eleve unEleve;
             // Connexion à la BD
             SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
@@ -116,7 +117,7 @@ namespace InfirmerieDAL
                     telephone_parent = default(string);
                     tiers_temps = default(bool);
                     commentaire_sante = default(string);
-                    libelle_classe = default(string);
+                    classe = default(Classe);
                 }
                 else
                 {
@@ -127,11 +128,11 @@ namespace InfirmerieDAL
                     telephone_parent = monReader["Telephone_parent_eleve"].ToString();
                     tiers_temps = bool.Parse(monReader["Tiers_temps_eleve"].ToString());
                     commentaire_sante = monReader["Commentaire_sante_eleve"].ToString();
-                    libelle_classe = monReader["Libelle_classe"].ToString();
+                    classe = new Classe((int)monReader["Id_classe"], monReader["Libelle_classe"].ToString());
                 }
 
                 unEleve = new Eleve(id, nom, prenom, date_de_naissance, telephone, telephone_parent, tiers_temps,
-                    commentaire_sante, libelle_classe);
+                    commentaire_sante, classe);
                 lesEleves.Add(unEleve);
             }
 
@@ -139,6 +140,64 @@ namespace InfirmerieDAL
             maConnexion.Close();
             return lesEleves;
         }
+
+        public static List<Eleve> DelEleve()
+        {
+            int id;
+            string nom;
+            string prenom;
+            DateTime date_de_naissance;
+            string telephone;
+            string telephone_parent;
+            bool tiers_temps;
+            string commentaire_sante;
+            Classe classe;
+            Eleve unEleve;
+            // Connexion à la BD
+            SqlConnection maConnexion = ConnexionBD.GetConnexionBD().GetSqlConnexion();
+            // Création d'une liste vide d'objets Eleves
+            List<Eleve> lesEleves = new List<Eleve>();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = maConnexion;
+            cmd.CommandText = "SELECT * FROM T_Eleve, T_Classe WHERE T_Eleve.Id_classe_eleve = T_Classe.Id_classe AND Id_eleve NOT IN (SELECT Id_eleve_visite FROM T_Visite)";
+            SqlDataReader monReader = cmd.ExecuteReader();
+            // Remplissage de la liste
+            while (monReader.Read())
+            {
+                id = Int32.Parse(monReader["Id_eleve"].ToString());
+                if (monReader["Id_eleve"] == DBNull.Value)
+                {
+                    nom = default(string);
+                    prenom = default(string);
+                    date_de_naissance = default(DateTime);
+                    telephone = default(string);
+                    telephone_parent = default(string);
+                    tiers_temps = default(bool);
+                    commentaire_sante = default(string);
+                    classe = default(Classe);
+                }
+                else
+                {
+                    nom = monReader["Nom_eleve"].ToString();
+                    prenom = monReader["Prenom_eleve"].ToString();
+                    date_de_naissance = DateTime.Parse(monReader["Date_de_naissance_eleve"].ToString());
+                    telephone = monReader["Telephone_eleve"].ToString();
+                    telephone_parent = monReader["Telephone_parent_eleve"].ToString();
+                    tiers_temps = bool.Parse(monReader["Tiers_temps_eleve"].ToString());
+                    commentaire_sante = monReader["Commentaire_sante_eleve"].ToString();
+                    classe = new Classe((int)monReader["Id_classe"], monReader["Libelle_classe"].ToString());
+                }
+
+                unEleve = new Eleve(id, nom, prenom, date_de_naissance, telephone, telephone_parent, tiers_temps,
+                    commentaire_sante, classe);
+                lesEleves.Add(unEleve);
+            }
+
+            // Fermeture de la connexion
+            maConnexion.Close();
+            return lesEleves;
+        }
+
 
         public static int InsertEleve(Eleve unEleve)
         {

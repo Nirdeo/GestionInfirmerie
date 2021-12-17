@@ -15,7 +15,7 @@ namespace InfirmerieGUI
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
             GestionEleves.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Infirmerie"]);
             List<Eleve> liste = new List<Eleve>();
-            liste = GestionEleves.ObtenirEleves();
+            liste = GestionEleves.SupEleve();
 
             cbxSupEle.ValueMember = "Id";
             cbxSupEle.DisplayMember = "Identite";
@@ -24,6 +24,7 @@ namespace InfirmerieGUI
 
         private void btnSupEle_Click(object sender, EventArgs e)
         {
+
             if (!string.IsNullOrEmpty(cbxSupEle.Text))
             {
                 DialogResult dialogResult = MessageBox.Show("Voulez-vous supprimer l'élève sélectionné ?",
@@ -35,7 +36,7 @@ namespace InfirmerieGUI
                     GestionEleves.SupprimerEleve(unEleve);
                     MessageBox.Show("L'élève a bien été supprimé");
                     List<Eleve> liste = new List<Eleve>();
-                    liste = GestionEleves.ObtenirEleves();
+                    liste = GestionEleves.SupEleve();
 
                     cbxSupEle.ValueMember = "Id";
                     cbxSupEle.DisplayMember = "Identite";
@@ -45,7 +46,7 @@ namespace InfirmerieGUI
 
             else
             {
-                MessageBox.Show("Veuillez remplir les champs");
+                MessageBox.Show("Il n'y a pas d'élève à supprimer");
             }
         }
 

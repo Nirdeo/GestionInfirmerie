@@ -32,5 +32,10 @@
             get => Libelle_medicament;
             set => Libelle_medicament = value;
         }
+
+        public override string ToString()
+        {
+            return Libelle.ToString();     
+        }
     }
 }

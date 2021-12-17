@@ -36,5 +36,10 @@
             get => Libelle_classe;
             set => Libelle_classe = value;
         }
+
+        public override string ToString()
+        {
+            return Libelle.ToString();
+        }
     }
 }

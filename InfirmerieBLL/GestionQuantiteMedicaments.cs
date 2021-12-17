@@ -35,5 +35,20 @@ namespace InfirmerieBLL
         {
             return QuantiteMedicamentDAO.GetQuantiteMedicaments();
         }
+
+        public static int AjouterQuantiteMedicament(QuantiteMedicament uneQuantiteMedicament)
+        {
+            return QuantiteMedicamentDAO.InsertQuantiteMedicament(uneQuantiteMedicament);
+        }
+
+        public static int ModifierQuantiteMedicament(QuantiteMedicament uneQuantiteMedicament)
+        {
+            return QuantiteMedicamentDAO.UpdateQuantiteMedicament(uneQuantiteMedicament);
+        }
+
+        public static List<QuantiteMedicament> ChercherQuantiteMedicament(string nomQ)
+        {
+            return QuantiteMedicamentDAO.ConsulterQuantiteMedicament(nomQ);
+        }
     }
 }

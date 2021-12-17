@@ -15,7 +15,7 @@ namespace InfirmerieGUI
             // Récupération de chaîne de connexion à la BD à l'ouverture du formulaire
             GestionMedicaments.SetchaineConnexion(ConfigurationManager.ConnectionStrings["Infirmerie"]);
             List<Medicament> liste = new List<Medicament>();
-            liste = GestionMedicaments.ObtenirMedicaments();
+            liste = GestionMedicaments.SupMedicament();
 
             cbxSupMed.ValueMember = "Id";
             cbxSupMed.DisplayMember = "Libelle";
@@ -35,7 +35,7 @@ namespace InfirmerieGUI
                     GestionMedicaments.SupprimerMedicament(unMedicament);
                     MessageBox.Show("Le médicament a bien été supprimé");
                     List<Medicament> liste = new List<Medicament>();
-                    liste = GestionMedicaments.ObtenirMedicaments();
+                    liste = GestionMedicaments.SupMedicament();
 
                     cbxSupMed.ValueMember = "Id";
                     cbxSupMed.DisplayMember = "Libelle";
@@ -45,7 +45,7 @@ namespace InfirmerieGUI
 
             else
             {
-                MessageBox.Show("Veuillez remplir les champs");
+                MessageBox.Show("Il n'y a pas de médicament à supprimer");
             }
         }
 

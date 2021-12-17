@@ -34,13 +34,11 @@
             this.dgvVisite = new System.Windows.Forms.DataGridView();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.lblNom = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpVD = new System.Windows.Forms.DateTimePicker();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.dgvVisiteQM = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteQM)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitre
@@ -67,88 +65,65 @@
             // dgvVisite
             // 
             this.dgvVisite.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVisite.Location = new System.Drawing.Point(294, 126);
+            this.dgvVisite.Location = new System.Drawing.Point(12, 82);
             this.dgvVisite.Name = "dgvVisite";
             this.dgvVisite.RowHeadersWidth = 51;
             this.dgvVisite.RowTemplate.Height = 24;
-            this.dgvVisite.Size = new System.Drawing.Size(230, 270);
+            this.dgvVisite.Size = new System.Drawing.Size(776, 174);
             this.dgvVisite.TabIndex = 11;
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(423, 56);
+            this.txtNom.Location = new System.Drawing.Point(608, 54);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(180, 22);
             this.txtNom.TabIndex = 10;
+            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             // 
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(223, 62);
+            this.lblNom.Location = new System.Drawing.Point(426, 57);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(181, 16);
+            this.lblNom.Size = new System.Drawing.Size(176, 16);
             this.lblNom.TabIndex = 9;
-            this.lblNom.Text = "Saisissez le nom de la visite :";
+            this.lblNom.Text = "Saisissez le nom de l\'élève :";
             // 
-            // label3
+            // dtpVD
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(580, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "label3";
+            this.dtpVD.Location = new System.Drawing.Point(217, 54);
+            this.dtpVD.Name = "dtpVD";
+            this.dtpVD.Size = new System.Drawing.Size(200, 22);
+            this.dtpVD.TabIndex = 15;
+            this.dtpVD.ValueChanged += new System.EventHandler(this.dtpVD_ValueChanged);
             // 
-            // label2
+            // lblDate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(697, 161);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "label2";
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(9, 57);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(189, 16);
+            this.lblDate.TabIndex = 16;
+            this.lblDate.Text = "Choisissez la date de la visite :";
             // 
-            // label1
+            // dgvVisiteQM
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(645, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "label1";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(556, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 17;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(662, 180);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 16;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(562, 136);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dgvVisiteQM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVisiteQM.Location = new System.Drawing.Point(197, 262);
+            this.dgvVisiteQM.Name = "dgvVisiteQM";
+            this.dgvVisiteQM.RowHeadersWidth = 51;
+            this.dgvVisiteQM.RowTemplate.Height = 24;
+            this.dgvVisiteQM.Size = new System.Drawing.Size(405, 149);
+            this.dgvVisiteQM.TabIndex = 17;
             // 
             // FrmConsultationVisite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dgvVisiteQM);
+            this.Controls.Add(this.lblDate);
+            this.Controls.Add(this.dtpVD);
             this.Controls.Add(this.lblTitre);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.dgvVisite);
@@ -158,6 +133,7 @@
             this.Name = "FrmConsultationVisite";
             this.Text = "Gestion Infirmerie";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVisite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVisiteQM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,11 +146,8 @@
         private System.Windows.Forms.DataGridView dgvVisite;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label lblNom;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpVD;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.DataGridView dgvVisiteQM;
     }
 }

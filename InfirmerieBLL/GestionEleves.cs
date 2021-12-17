@@ -55,5 +55,10 @@ namespace InfirmerieBLL
         {
             return EleveDAO.DeleteEleve(unEleve);
         }
+
+        public static List<Eleve> SupEleve()
+        {
+            return EleveDAO.DelEleve();
+        }
     }
 }

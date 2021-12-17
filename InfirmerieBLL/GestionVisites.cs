@@ -1,11 +1,8 @@
-﻿using InfirmerieBO; // Référence la couche BO
-using InfirmerieDAL; // Référence la couche DAL
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using InfirmerieBO; // Référence la couche BO
+using InfirmerieDAL; // Référence la couche DAL
 
 namespace InfirmerieBLL
 {
@@ -34,6 +31,41 @@ namespace InfirmerieBLL
         public static List<Visite> ObtenirVisites()
         {
             return VisiteDAO.GetVisites();
+        }
+
+        public static List<Visite> ObtenirVisitesQM()
+        {
+            return VisiteDAO.GetVisitesQM();
+        }
+
+        public static int AjouterVisite(Visite uneVisite)
+        {
+            return VisiteDAO.InsertVisite(uneVisite);
+        }
+
+        public static int ModifierVisite(Visite uneVisite)
+        {
+            return VisiteDAO.UpdateVisite(uneVisite);
+        }
+
+        public static List<Visite> ChercherVisiteN(string nomV)
+        {
+            return VisiteDAO.ConsulterVisiteN(nomV);
+        }
+
+        public static List<Visite> ChercherVisiteD(DateTime dateV)
+        {
+            return VisiteDAO.ConsulterVisiteD(dateV);
+        }
+
+        public static List<Visite> ChercherVisiteNM(string nomV)
+        {
+            return VisiteDAO.ConsulterVisiteNM(nomV);
+        }
+
+        public static List<Visite> ChercherVisiteDM(DateTime dateV)
+        {
+            return VisiteDAO.ConsulterVisiteDM(dateV);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace InfirmerieGUI
             txtNumParEle.Text = unEleve.Telephone_parent;
             chkTieTemEle.Checked = unEleve.Tiers_temps;
             txtComSanEle.Text = unEleve.Commentaire_sante;
-            cbxClaEle.Text = unEleve.Libelle_classe;
+            cbxClaEle.Text = unEleve.Classe.Libelle;
         }
 
         private void btnModEle_Click(object sender, EventArgs e)

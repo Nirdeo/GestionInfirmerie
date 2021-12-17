@@ -56,7 +56,7 @@ namespace InfirmerieGUI
 
             // Création d'une en-tête de colonne pour la colonne 8
             DataGridViewTextBoxColumn LibelleClasseColumn = new DataGridViewTextBoxColumn();
-            LibelleClasseColumn.DataPropertyName = "Libelle_classe";
+            LibelleClasseColumn.DataPropertyName = "Classe";
             LibelleClasseColumn.HeaderText = "Classe de l'élève";
 
             // Ajout des 9 en-têtes de colonne au datagridview
@@ -93,9 +93,9 @@ namespace InfirmerieGUI
 
         private void txtNom_TextChanged(object sender, EventArgs e)
         {
-            List<Eleve> liste = new List<Eleve>();
-            liste = GestionEleves.ChercherEleve(txtNom.Text);
-            dgvEleve.DataSource = liste;
+           // List<Eleve> liste = new List<Eleve>();
+            //liste = GestionEleves.ChercherEleve(txtNom.Text);
+            //dgvEleve.DataSource = liste;
         }
     }
 }

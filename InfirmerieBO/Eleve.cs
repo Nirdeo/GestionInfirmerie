@@ -9,7 +9,6 @@ namespace InfirmerieBO
         private DateTime Date_de_naissance_eleve;
         private int Id_classe_eleve;
         private int Id_eleve;
-        private string Libelle_classe_eleve;
         private string Nom_eleve;
         private string Prenom_eleve;
         private string Telephone_eleve;
@@ -45,7 +44,7 @@ namespace InfirmerieBO
         public Eleve(int id_eleve, string nom_eleve, string prenom_eleve, DateTime date_de_naissance_eleve,
             string telephone_eleve, string telephone_parent_eleve, bool tiers_temps_eleve,
             string commentaire_sante_eleve,
-            Classe classe)
+            Classe classe_eleve)
         {
             Id_eleve = id_eleve;
             Nom_eleve = nom_eleve;
@@ -55,7 +54,7 @@ namespace InfirmerieBO
             Telephone_parent_eleve = telephone_parent_eleve;
             Tiers_temps_eleve = tiers_temps_eleve;
             Commentaire_sante_eleve = commentaire_sante_eleve;
-            Classe_eleve = classe;
+            Classe_eleve = classe_eleve;
         }
 
         public Eleve(string nom_eleve, string prenom_eleve, DateTime date_de_naissance_eleve,
@@ -73,12 +72,24 @@ namespace InfirmerieBO
             Id_classe_eleve = id_classe_eleve;
         }
 
-        public Eleve(int id_eleve, string nom_eleve, string prenom_eleve, DateTime date_de_naissance_eleve,
-            string telephone_eleve, string telephone_parent_eleve, bool tiers_temps_eleve,
-            string commentaire_sante_eleve,
-            string libelle_classe_eleve)
+
+        public Eleve(int id_eleve, string nom_eleve, string prenom_eleve, DateTime date_de_naissance_eleve)
         {
             Id_eleve = id_eleve;
+            Nom_eleve = nom_eleve;
+            Prenom_eleve = prenom_eleve;
+            Date_de_naissance_eleve = date_de_naissance_eleve;
+        }
+
+        public Eleve(int id_eleve, string nom_eleve, string prenom_eleve)
+        {
+            Id_eleve = id_eleve;
+            Nom_eleve = nom_eleve;
+            Prenom_eleve = prenom_eleve;
+        }
+
+        public Eleve(string nom_eleve, string prenom_eleve, DateTime date_de_naissance_eleve, string telephone_eleve, string telephone_parent_eleve, bool tiers_temps_eleve, string commentaire_sante_eleve, Classe classe_eleve)
+        {
             Nom_eleve = nom_eleve;
             Prenom_eleve = prenom_eleve;
             Date_de_naissance_eleve = date_de_naissance_eleve;
@@ -86,7 +97,7 @@ namespace InfirmerieBO
             Telephone_parent_eleve = telephone_parent_eleve;
             Tiers_temps_eleve = tiers_temps_eleve;
             Commentaire_sante_eleve = commentaire_sante_eleve;
-            Libelle_classe_eleve = libelle_classe_eleve;
+            Classe_eleve = classe_eleve;
         }
 
         public int Id
@@ -143,11 +154,6 @@ namespace InfirmerieBO
             set => Id_classe_eleve = value;
         }
 
-        public string Libelle_classe
-        {
-            get => Libelle_classe_eleve;
-            set => Libelle_classe_eleve = value;
-        }
 
         public string Identite
         {
@@ -158,6 +164,11 @@ namespace InfirmerieBO
         {
             get => Classe_eleve;
             set => Classe_eleve = value;
+        }
+
+        public override string ToString()
+        {
+            return Identite.ToString();
         }
     }
 }

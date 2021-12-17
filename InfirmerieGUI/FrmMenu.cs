@@ -53,17 +53,17 @@ namespace InfirmerieGUI
         private void btnAjoV_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmAjoutVisite FrmAjoVisite;
-            FrmAjoVisite = new FrmAjoutVisite();
-            FrmAjoVisite.Show();
+            FrmTransitionVisiteAjt FrmTraVisite;
+            FrmTraVisite = new FrmTransitionVisiteAjt();
+            FrmTraVisite.Show();
         }
 
         private void btnModV_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmModificationVisite FrmModVisite;
-            FrmModVisite = new FrmModificationVisite();
-            FrmModVisite.Show();
+            FrmTransitionVisite FrmTraVisite;
+            FrmTraVisite = new FrmTransitionVisite();
+            FrmTraVisite.Show();
         }
 
         private void btnConM_Click(object sender, EventArgs e)

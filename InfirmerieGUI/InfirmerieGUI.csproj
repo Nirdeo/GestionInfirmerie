@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -48,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAjoutVisite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAjoutVisite.Designer.cs">
+      <DependentUpon>FrmAjoutVisite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTransitionVisiteAjt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTransitionVisiteAjt.Designer.cs">
+      <DependentUpon>FrmTransitionVisiteAjt.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTransitionEleve.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +90,6 @@
     </Compile>
     <Compile Include="FrmConsultationVisite.Designer.cs">
       <DependentUpon>FrmConsultationVisite.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAjoutVisite.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAjoutVisite.Designer.cs">
-      <DependentUpon>FrmAjoutVisite.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmModificationVisite.cs">
       <SubType>Form</SubType>
@@ -149,14 +156,14 @@
     <EmbeddedResource Include="FrmAjoutEleve.resx">
       <DependentUpon>FrmAjoutEleve.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAjoutVisite.resx">
+      <DependentUpon>FrmAjoutVisite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmModificationEleve.resx">
       <DependentUpon>FrmModificationEleve.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAjoutMedicament.resx">
       <DependentUpon>FrmAjoutMedicament.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmAjoutVisite.resx">
-      <DependentUpon>FrmAjoutVisite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAuthentification.resx">
       <DependentUpon>FrmAuthentification.cs</DependentUpon>
@@ -193,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTransitionVisite.resx">
       <DependentUpon>FrmTransitionVisite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransitionVisiteAjt.resx">
+      <DependentUpon>FrmTransitionVisiteAjt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
