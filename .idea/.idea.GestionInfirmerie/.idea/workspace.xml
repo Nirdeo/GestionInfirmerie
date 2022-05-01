@@ -7,96 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f56eaf1e-013c-4d89-a754-f1c86699f6f6" name="Changes" comment="">
+    <list default="true" id="a5a8dd9f-dab2-4b36-b483-8f9d20dbad7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GestionInfirmerie/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GestionInfirmerie/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GestionInfirmerie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GestionInfirmerie/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CahierDeRecettes.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/CahierDeRecettes.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/GestionInfirmerie.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/GestionInfirmerie.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/JeuDessai.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/JeuDessai.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestionInfirmerie.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GestionInfirmerie.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBLL/GestionClasses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBLL/GestionClasses.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBLL/GestionEleves.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBLL/GestionEleves.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBLL/GestionMedicaments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBLL/GestionMedicaments.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InfirmerieBLL/GestionQuantiteMedicaments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBLL/GestionQuantiteMedicaments.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBLL/GestionUtilisateurs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBLL/GestionUtilisateurs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBLL/GestionVisites.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBLL/GestionVisites.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBLL/InfirmerieBLL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBLL/InfirmerieBLL.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBLL/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBLL/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBO/Classe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/Classe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBO/Eleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/Eleve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBO/InfirmerieBO.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/InfirmerieBO.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBO/Medicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/Medicament.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBO/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/Properties/AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/InfirmerieBO/QuantiteMedicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/QuantiteMedicament.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBO/Utilisateur.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/Utilisateur.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBO/Visite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/Visite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/ClasseDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/ClasseDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/ConnexionBD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/ConnexionBD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/EleveDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/EleveDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/InfirmerieDAL.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/InfirmerieDAL.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/MedicamentDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/MedicamentDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/QuantiteMedicamentDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/QuantiteMedicamentDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/UtilisateurDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/UtilisateurDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/VisiteDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/VisiteDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/App.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutMedicament.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutMedicament.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutMedicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutMedicament.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutMedicament.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutMedicament.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutVisite.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutVisite.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutVisite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutVisite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAuthentification.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAuthentification.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAuthentification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAuthentification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAuthentification.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAuthentification.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationEleve.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationEleve.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationEleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationEleve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationEleve.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationEleve.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationMedicament.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationMedicament.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationMedicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationMedicament.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationMedicament.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationMedicament.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationVisite.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationVisite.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationVisite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmConsultationVisite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmDetailsEleve.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmDetailsEleve.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmDetailsEleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmDetailsEleve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmDetailsEleve.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmDetailsEleve.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmMenu.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmMenu.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmMenu.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmMenu.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModicationMedicament.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModicationMedicament.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModicationMedicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModicationMedicament.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationMedicament.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationMedicament.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationMedicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationMedicament.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationMedicament.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationMedicament.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationVisite.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationVisite.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationVisite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationVisite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmSuppressionEleve.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmSuppressionEleve.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmSuppressionEleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmSuppressionEleve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmSuppressionMedicament.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmSuppressionMedicament.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmSuppressionMedicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmSuppressionMedicament.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmSupressionEleve.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmSupressionEleve.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmSupressionEleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmSupressionEleve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmSupressionEleve.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmSupressionEleve.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionEleve.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionEleve.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionEleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionEleve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionEleve.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionEleve.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionMedicament.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionMedicament.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionMedicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionMedicament.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionMedicament.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionMedicament.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionVisite.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionVisite.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionVisite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmTransitionVisite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/InfirmerieGUI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/InfirmerieGUI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/Properties/Resources.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/Properties/Resources.resx" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/Properties/Resources.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/Properties/Settings.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/Properties/Settings.settings" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/Properties/Settings.settings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,27 +22,36 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="22PDeiDEREUeXRGmt24MxmEuU9w" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="28WXTM3EJhUxh6m6NeR493nBToO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver.localdb&quot;,
+      &quot;sqlserver&quot;
+    ]
+  }
+}</component>
   <component name="RunManager">
     <configuration name="InfirmerieGUI" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
