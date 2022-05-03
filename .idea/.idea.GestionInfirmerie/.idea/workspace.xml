@@ -8,19 +8,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a8dd9f-dab2-4b36-b483-8f9d20dbad7a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GestionInfirmerie/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GestionInfirmerie/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GestionInfirmerie/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GestionInfirmerie/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CahierDeRecettes.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/CahierDeRecettes.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBLL/GestionQuantiteMedicaments.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBLL/GestionQuantiteMedicaments.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InfirmerieBO/QuantiteMedicament.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/QuantiteMedicament.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/GestionInfirmerie.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Database/GestionInfirmerie.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfirmerieBO/Eleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieBO/Eleve.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfirmerieDAL/EleveDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieDAL/EleveDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmAjoutEleve.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/InfirmerieGUI/FrmModificationEleve.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
